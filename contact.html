@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Page: contact.html. Part of SWE2106 Etivity 3, "The Professional Semantic Portfolio". -->
+<html lang="en">
+<head>
+  <!-- Character encoding first, so every browser reads accents and symbols correctly -->
+  <meta charset="utf-8">
+  <!-- Makes the layout scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Each page has its own title: it is what appears in the browser tab and in search results -->
+  <title>Contact | Tumushabe Happy</title>
+  <meta name="description" content="Send Tumushabe Happy a message using the contact form.">
+  <!-- No CSS on purpose: this site uses semantic HTML only, so the browser's default layout is used. -->
+</head>
+<body>
+  <!-- Skip link: lets keyboard users jump past the navigation straight to the content -->
+  <a href="#content">Skip to main content</a>
+
+  <!-- ===== SITE HEADER =====
+       <header> is the banner landmark. It holds the site identity and the main <nav>.
+       It is repeated on every page so visitors always know where they are. -->
+  <header>
+    <p><a href="index.html">Tumushabe Happy</a></p>
+    <p>Software engineering and web design student at MUST</p>
+
+    <!-- <nav> marks the main navigation landmark.
+         The list inside is a real <ul>, so assistive technology announces "list, 5 items".
+         aria-current="page" tells screen readers which page is open. -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="data.html">Skills data</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT =====
+       <main> appears once per page and holds what is unique to that page. -->
+  <main id="content">
+    <article>
+      <h1>Contact me</h1>
+      <p>Questions about my work, feedback on the design, or an idea for a project? Send me a message.</p>
+      <p>Fields marked as required must be filled in. Your phone number is optional.</p>
+    </article>
+
+    <aside aria-labelledby="find-title">
+      <h2 id="find-title">Find me</h2>
+      <!-- <address> is for contact details of the page's author or owner. -->
+      <address>
+        <p>Tumushabe Happy<br>
+        Mbarara University of Science and Technology<br>
+        Mbarara, Uganda</p>
+        <!-- EDIT: put your real email address here and in the form action below. -->
+        <p><a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      </address>
+    </aside>
+
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Send a message</h2>
+      <!-- EDIT: this form opens the visitor's email app. On a hosted site, replace the action with a form service address.
+           Every field has a <label> linked by matching for/id, so it is read aloud correctly and the label is clickable.
+           type="email" and type="tel" bring up the right keyboard on phones. -->
+      <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+        <fieldset>
+          <legend>Your details</legend>
+          <p>
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </p>
+          <p>
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </p>
+          <p>
+            <label for="phone">Phone number (optional)</label>
+            <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="+256 700 000000" aria-describedby="phone-hint">
+            <small id="phone-hint">Include the country code.</small>
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your message</legend>
+          <p>
+            <label for="topic">What is this about?</label>
+            <select id="topic" name="topic">
+              <option value="feedback">Feedback on the portfolio</option>
+              <option value="project">A project idea</option>
+              <option value="course">A question about the course</option>
+              <option value="other">Something else</option>
+            </select>
+          </p>
+          <p>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </p>
+        </fieldset>
+
+        <p><button type="submit">Send message</button></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- ===== SITE FOOTER =====
+       <footer> closes the page. It repeats on every page. -->
+  <footer>
+    <p>Portfolio of Tumushabe Happy for SWE2106 Internet Technologies and Web Design at Mbarara University of Science and Technology representing the entire group..</p>
+    <p>Built with HTML5 only.</p>
+    <p>Questions or feedback? Use the <a href="contact.html">contact form</a>.</p>
+  </footer>
+</body>
+</html>
