@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!-- Page: about.html. Part of SWE2106 Etivity 3, "The Professional Semantic Portfolio". -->
+<html lang="en">
+<head>
+  <!-- Character encoding first, so every browser reads accents and symbols correctly -->
+  <meta charset="utf-8">
+  <!-- Makes the layout scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Each page has its own title: it is what appears in the browser tab and in search results -->
+  <title>About me | Tumushabe Happy</title>
+  <meta name="description" content="About Tumushabe Happy: what I do outside class, my timeline and the web design terms I use.">
+  <!-- No CSS on purpose: this site uses semantic HTML only, so the browser's default layout is used. -->
+</head>
+<body>
+  <!-- Skip link: lets keyboard users jump past the navigation straight to the content -->
+  <a href="#content">Skip to main content</a>
+
+  <!-- ===== SITE HEADER =====
+       <header> is the banner landmark. It holds the site identity and the main <nav>.
+       It is repeated on every page so visitors always know where they are. -->
+  <header>
+    <p><a href="index.html">Tumushabe Happy</a></p>
+    <p>Software engineering and web design student at MUST</p>
+
+    <!-- <nav> marks the main navigation landmark.
+         The list inside is a real <ul>, so assistive technology announces "list, 5 items".
+         aria-current="page" tells screen readers which page is open. -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="data.html">Skills data</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT =====
+       <main> appears once per page and holds what is unique to that page. -->
+  <main id="content">
+    <article>
+      <h1>About me</h1>
+      <p>I'm a student at MUST in Mbarara, learning to build software and websites one careful step at a time.</p>
+      <p>My rule for this course is simple: every element must have a reason to be on the page. If a plain paragraph, list or table does the job, I use it before reaching for anything fancier.</p>
+    </article>
+
+    <aside aria-labelledby="course-title">
+      <h2 id="course-title">The course</h2>
+      <p>SWE2106 Internet Technologies and Web Design.</p>
+      <p>Etivity 3 asks for a five-page semantic HTML5 portfolio, built page by page and committed to GitHub as I go.</p>
+    </aside>
+
+    <section aria-labelledby="focus-title">
+      <h2 id="focus-title">Beyond the classroom</h2>
+      <!-- EDIT: adjust these three descriptions so they match what you actually do. -->
+      <ul>
+        <li><h3>Deep Minds</h3><p>I facilitate a peer course on prompt engineering.</p></li>
+        <li><h3>IEEE Student Branch</h3><p>I am the webmaster for our chapter on campus.</p></li>
+        <li><h3>Local context</h3><p>I use south-western Uganda's farming and livestock needs as a lens for technology projects.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="timeline-title">
+      <h2 id="timeline-title">How I got here</h2>
+      <!-- An ORDERED list (<ol>) is correct here because the milestones happen in sequence.
+           <time datetime="..."> gives each date in a format machines can read.
+           EDIT: swap in your own real milestones and dates. -->
+      <ol>
+        <li>
+          <time datetime="2026-02">February 2026</time>
+          <p>Started SWE2106 and set up my first project folder.</p>
+        </li>
+        <li>
+          <time datetime="2026-03">March 2026</time>
+          <p>Built my first static page and fixed every error the W3C validator reported.</p>
+        </li>
+        <li>
+          <time datetime="2026-05">May 2026</time>
+          <p>Started using Git, committing small changes with clear messages.</p>
+        </li>
+        <li>
+          <time datetime="2026-08">August 2026</time>
+          <p>Checked a web page for missing alt text, empty links and unlabelled form fields.</p>
+        </li>
+        <li>
+          <time datetime="2026-10">October 2026</time>
+          <p>Planned and built this five-page portfolio for Etivity 3.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="terms-title">
+      <h2 id="terms-title">Terms I use</h2>
+      <!-- A description list (<dl>) pairs each term (<dt>) with its meaning (<dd>).
+           <dfn> marks the exact place where a term is defined. -->
+      <dl>
+        <dt><dfn>Semantic HTML</dfn></dt>
+        <dd>Markup chosen for what content means, such as a heading, a list or a navigation area, rather than how it looks.</dd>
+
+        <dt><dfn>Landmark</dfn></dt>
+        <dd>An element like <code>header</code>, <code>nav</code> or <code>main</code> that lets screen reader users jump straight to a region of the page.</dd>
+
+        <dt><dfn>Alt text</dfn></dt>
+        <dd>A short written description of an image, read aloud when the image cannot be seen or fails to load.</dd>
+
+        <dt><dfn>Wireframe</dfn></dt>
+        <dd>A plain sketch of a page layout that shows where content goes before any colour or type is chosen.</dd>
+
+        <dt><dfn>Sitemap</dfn></dt>
+        <dd>A diagram of every page in a site and how the pages link together.</dd>
+
+        <dt><dfn>Commit</dfn></dt>
+        <dd>A saved snapshot of the project in Git, with a message that says what changed.</dd>
+
+        <dt><dfn>Hyperlink</dfn></dt>
+        <dd>Text or an image that takes the visitor to another page, or to another place on the same page.</dd>
+      </dl>
+    </section>
+  </main>
+
+  <!-- ===== SITE FOOTER =====
+       <footer> closes the page. It repeats on every page. -->
+  <footer>
+    <p>Portfolio of Tumushabe Happy for SWE2106 Internet Technologies and Web Design at Mbarara University of Science and Technology representing the entire group..</p>
+    <p>Built with HTML5 only.</p>
+    <p>Questions or feedback? Use the <a href="contact.html">contact form</a>.</p>
+  </footer>
+</body>
+</html>
