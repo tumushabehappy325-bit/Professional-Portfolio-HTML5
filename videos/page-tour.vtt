@@ -1,0 +1,26 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:03.000
+The <header> element holds the site name and the main navigation.
+
+2
+00:00:03.000 --> 00:00:06.000
+The <nav> element lists the five pages as links in a real list.
+
+3
+00:00:06.000 --> 00:00:09.000
+The <main> element wraps the content that is unique to this page.
+
+4
+00:00:09.000 --> 00:00:12.000
+The <article> element is a self-contained piece of content: here, the introduction.
+
+5
+00:00:12.000 --> 00:00:15.000
+The <aside> element carries related material: here, an outline of the page.
+
+6
+00:00:15.000 --> 00:00:18.000
+The <footer> element closes the page and links to the contact form.
+

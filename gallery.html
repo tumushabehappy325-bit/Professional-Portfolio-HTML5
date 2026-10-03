@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Page: gallery.html. Part of SWE2106 Etivity 3, "The Professional Semantic Portfolio". -->
+<html lang="en">
+<head>
+  <!-- Character encoding first, so every browser reads accents and symbols correctly -->
+  <meta charset="utf-8">
+  <!-- Makes the layout scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Each page has its own title: it is what appears in the browser tab and in search results -->
+  <title>Gallery | Tumushabe Happy</title>
+  <meta name="description" content="Wireframes, a sitemap and a video tour of the page structure.">
+  <!-- No CSS on purpose: this site uses semantic HTML only, so the browser's default layout is used. -->
+</head>
+<body>
+  <!-- Skip link: lets keyboard users jump past the navigation straight to the content -->
+  <a href="#content">Skip to main content</a>
+
+  <!-- ===== SITE HEADER =====
+       <header> is the banner landmark. It holds the site identity and the main <nav>.
+       It is repeated on every page so visitors always know where they are. -->
+  <header>
+    <p><a href="index.html">Tumushabe Happy</a></p>
+    <p>Software engineering and web design student at MUST</p>
+
+    <!-- <nav> marks the main navigation landmark.
+         The list inside is a real <ul>, so assistive technology announces "list, 5 items".
+         aria-current="page" tells screen readers which page is open. -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="data.html">Skills data</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT =====
+       <main> appears once per page and holds what is unique to that page. -->
+  <main id="content">
+    <article>
+      <h1>Gallery</h1>
+      <p>Two wireframes and a sitemap from my design work on this project, and a short video tour of the page structure.</p>
+      <p>Each image is a figure with a caption, and each has alt text that describes what it shows.</p>
+    </article>
+
+    <aside aria-labelledby="notes-title">
+      <h2 id="notes-title">About these files</h2>
+      <p>The images are SVG files. The video has captions you can switch on from its controls.</p>
+    </aside>
+
+    <section aria-labelledby="work-title">
+      <h2 id="work-title">Design work</h2>
+
+      <!-- <figure> wraps self-contained media. <figcaption> is its visible caption.
+           width and height stop the page jumping as images load. -->
+      <figure>
+        <img src="images/wireframe-home.svg" width="440" height="440"
+             alt="Wireframe of the home page. A header with the site name and a list of five navigation links sits at the top. The main area stacks an article, an aside and a section of three articles. A footer closes the page.">
+        <figcaption>Home page wireframe, with each area labelled by its HTML5 element.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/wireframe-gallery.svg" width="440" height="440"
+             alt="Wireframe of the gallery page. The header and navigation sit at the top. The main area holds an article, an aside, three figure boxes with image placeholders and a video box with a play button. A footer closes the page.">
+        <figcaption>Gallery page wireframe, showing the figures and the video.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/sitemap.svg" width="800" height="150"
+             alt="Sitemap. The box index.html at the top connects to four boxes below it: about.html, gallery.html, data.html and contact.html.">
+        <figcaption>Sitemap: the home page links to the other four pages.</figcaption>
+      </figure>
+    </section>
+
+    <section aria-labelledby="tour-title">
+      <h2 id="tour-title">Video: a tour of the page structure</h2>
+      <!-- <video> with controls, a poster image and a captions track (WebVTT file).
+           The text inside is shown only by browsers that cannot play video. -->
+      <figure>
+        <video controls preload="metadata" width="640" height="360" poster="images/tour-poster.png">
+          <source src="videos/page-tour.mp4" type="video/mp4">
+          <track kind="captions" src="videos/page-tour.vtt" srclang="en" label="English" default>
+          <p>Your browser cannot play this video. <a href="videos/page-tour.mp4">Download the page tour (MP4, 15 seconds)</a>.</p>
+        </video>
+        <figcaption>A 15-second walk through the header, navigation, main area, article, aside and footer.</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <!-- ===== SITE FOOTER =====
+       <footer> closes the page. It repeats on every page. -->
+  <footer>
+    <p>Portfolio of Tumushabe Happy for SWE2106 Internet Technologies and Web Design at Mbarara University of Science and Technology representing the entire group.</p>
+    <p>Built with HTML5 only.</p>
+    <p>Questions or feedback? Use the <a href="contact.html">contact form</a>.</p>
+  </footer>
+</body>
+</html>
