@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<!-- Page: index.html. Part of SWE2106 Etivity 3, "The Professional Semantic Portfolio". -->
+<html lang="en">
+<head>
+  <!-- Character encoding first, so every browser reads accents and symbols correctly -->
+  <meta charset="utf-8">
+  <!-- Makes the layout scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Each page has its own title: it is what appears in the browser tab and in search results -->
+  <title>Home | Tumushabe Happy</title>
+  <meta name="description" content="Portfolio of Tumushabe Happy: software engineering and web design built with semantic HTML5.">
+  <!-- This site uses semantic HTML only, so the browser's default layout is used. -->
+</head>
+<body>
+  <!-- Skip link: lets keyboard users jump past the navigation straight to the content -->
+  <a href="#content">Skip to main content</a>
+
+  <!-- ===== SITE HEADER =====
+       <header> is the banner landmark. It holds the site identity and the main <nav>.
+       It is repeated on every page so visitors always know where they are. -->
+  <header>
+    <p><a href="index.html">Tumushabe Happy</a></p>
+    <p>Software engineering | Internet Technology and web design Group Leader</p>
+
+    <!-- <nav> marks the main navigation landmark.
+         The list inside is a real <ul>, so assistive technology announces "list, 5 items".
+         aria-current="page" tells screen readers which page is open. -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="data.html">Skills data</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT =====
+       <main> appears once per page and holds what is unique to that page. -->
+  <main id="content">
+    <!-- <article> = a self-contained piece of content. Here it is the introduction. -->
+    <article>
+      <h1>Software engineering Internet Technology and web design</h1>
+      <p>I'm Tumushabe Happy, a student at Mbarara University of Science and Technology and a novice software developer.</p>
+      <p>This portfolio is class work for SWE2106. Each page uses HTML5 landmarks instead of anonymous boxes, so a browser, a screen reader and a search engine can all tell what each part of the page is for.</p>
+      <p>Start with <a href="about.html">more about me and what I do outside class</a>, look through <a href="gallery.html">the gallery of my design work</a>, or check <a href="data.html">the skills I have logged so far as the IT and web design student</a>.</p>
+    </article>
+
+    <!-- <aside> = related material that sits beside the main flow.
+         Here it shows the page you are reading as a nested list. -->
+    <aside aria-labelledby="outline-title">
+      <h2 id="outline-title">This page, outlined</h2>
+      <p>Every landmark on this page, from the outside in.</p>
+      <ul>
+        <li><code>header</code>
+          <ul><li><code>nav</code></li></ul>
+        </li>
+        <li><code>main</code>
+          <ul>
+            <li><code>article</code></li>
+            <li><code>aside</code></li>
+            <li><code>section</code></li>
+          </ul>
+        </li>
+        <li><code>footer</code></li>
+      </ul>
+    </aside>
+
+    <!-- <section> groups related content under one heading. aria-labelledby names it for screen readers. -->
+    <section aria-labelledby="practice-title">
+      <h2 id="practice-title">What we practise</h2>
+      <!-- Three <article>s inside the section: each could be read on its own. -->
+      <article>
+        <h3>Software engineering</h3>
+        <p>Writing small programs in HTML[5], tracking changes with Git.</p>
+      </article>
+      <article>
+        <h3>Web design</h3>
+        <p>Sketching wireframes and sitemaps, and planning how a page's content is organised before writing any markup.</p>
+      </article>
+      <article>
+        <h3>Technology for local needs</h3>
+        <p>I look at farming and livestock in south-western Uganda as a source of real problems for software to solve.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- ===== SITE FOOTER =====
+       <footer> closes the page. It repeats on every page. -->
+  <footer>
+    <p>Portfolio of Tumushabe Happy for SWE2106 Internet Technologies and Web Design at Mbarara University of Science and Technology representing the entire group..</p>
+    <p>Built with HTML5 only.</p>
+    <p>Questions or feedback? Use the <a href="contact.html">contact form</a>.</p>
+  </footer>
+</body>
+</html>
