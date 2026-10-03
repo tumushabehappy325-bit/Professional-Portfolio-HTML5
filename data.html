@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!-- Page: data.html. Part of SWE2106 Etivity 3, "The Professional Semantic Portfolio". -->
+<html lang="en">
+<head>
+  <!-- Character encoding first, so every browser reads accents and symbols correctly -->
+  <meta charset="utf-8">
+  <!-- Makes the layout scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Each page has its own title: it is what appears in the browser tab and in search results -->
+  <title>Skills data | Tumushabe Happy</title>
+  <meta name="description" content="A table of the skills, levels and hours Tumushabe Happy logged this semester.">
+  <!-- No CSS on purpose: this site uses semantic HTML only, so the browser's default layout is used. -->
+</head>
+<body>
+  <!-- Skip link: lets keyboard users jump past the navigation straight to the content -->
+  <a href="#content">Skip to main content</a>
+
+  <!-- ===== SITE HEADER =====
+       <header> is the banner landmark. It holds the site identity and the main <nav>.
+       It is repeated on every page so visitors always know where they are. -->
+  <header>
+    <p><a href="index.html">Tumushabe Happy</a></p>
+    <p>Software engineering and web design student at MUST</p>
+
+    <!-- <nav> marks the main navigation landmark.
+         The list inside is a real <ul>, so assistive technology announces "list, 5 items".
+         aria-current="page" tells screen readers which page is open. -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About me</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="data.html" aria-current="page">Skills data</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <!-- ===== MAIN CONTENT =====
+       <main> appears once per page and holds what is unique to that page. -->
+  <main id="content">
+    <article>
+      <h1>Skills and hours</h1>
+      <p>What I have practised this semester, how confident I feel, and the evidence for it.</p>
+      <p>Levels are my own honest ratings out of 5. Hours are the time I logged for each skill in my study log.</p>
+    </article>
+
+    <aside aria-labelledby="scale-title">
+      <h2 id="scale-title">Reading the levels</h2>
+      <p>1 means I have seen it once. 3 means I can do it with reference notes. 5 means I could teach it.</p>
+    </aside>
+
+    <section aria-labelledby="table-title">
+      <h2 id="table-title">Skill log</h2>
+      <!-- EDIT: replace these placeholder skills, levels and hours with your real figures.
+           Table structure: <caption> names the table; <thead>, <tbody> and <tfoot> split header, data and totals.
+           scope="col" and scope="row" tell screen readers which header belongs to each cell. -->
+      <table>
+        <caption>Skills I logged, October 2026</caption>
+        <thead>
+          <tr>
+            <th scope="col">Skill</th>
+            <th scope="col">Area</th>
+            <th scope="col">Level (out of 5)</th>
+            <th scope="col">Evidence</th>
+            <th scope="col">Hours</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">HTML5 semantics</th>
+            <td>Web design</td>
+            <td>4</td>
+            <td>This portfolio</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <th scope="row">Forms and inputs</th>
+            <td>Web design</td>
+            <td>3</td>
+            <td>Contact form on this site</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <th scope="row">Accessibility</th>
+            <td>Web design</td>
+            <td>3</td>
+            <td>Alt text and form labels</td>
+            <td>12</td>
+          </tr>
+          <tr>
+            <th scope="row">Wireframing</th>
+            <td>Web design</td>
+            <td>4</td>
+            <td>Design document for Etivity 3</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <th scope="row">Git and GitHub</th>
+            <td>Software engineering</td>
+            <td>3</td>
+            <td>One commit per page</td>
+            <td>14</td>
+          </tr>
+          <tr>
+            <th scope="row">Python</th>
+            <td>Software engineering</td>
+            <td>3</td>
+            <td>Weekly course labs</td>
+            <td>30</td>
+          </tr>
+          <tr>
+            <th scope="row">Prompt engineering</th>
+            <td>Software engineering</td>
+            <td>4</td>
+            <td>Facilitating the Deep Minds course</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <th scope="row">JavaScript basics</th>
+            <td>Software engineering</td>
+            <td>2</td>
+            <td>Lab exercises, not used on this site</td>
+            <td>16</td>
+          </tr>
+          <tr>
+            <th scope="row">Testing and validation</th>
+            <td>Software engineering</td>
+            <td>3</td>
+            <td>W3C validator checks</td>
+            <td>8</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Totals</th>
+            <td>3.22 average</td>
+            <td>9 skills</td>
+            <td>142</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <!-- ===== SITE FOOTER =====
+       <footer> closes the page. It repeats on every page. -->
+  <footer>
+    <p>Portfolio of Tumushabe Happy for SWE2106 Internet Technologies and Web Design at Mbarara University of Science and Technology representing the entire group..</p>
+    <p>Built with HTML5 only.</p>
+    <p>Questions or feedback? Use the <a href="contact.html">contact form</a>.</p>
+  </footer>
+</body>
+</html>
